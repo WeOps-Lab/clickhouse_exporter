@@ -1,0 +1,15 @@
+commonLabels:
+  object: clickhouse
+
+nodeSelector:
+  node-role: worker
+
+podLabels:
+  object: clickhouse
+
+auth:
+  username: admin
+  password: weops@1#2!
+
+metrics:
+  enabled: true
