@@ -52,6 +52,6 @@ func main() {
 			</body>
 			</html>`))
 	})
-
+	log.Printf("Listening on %s", *listeningAddress)
 	log.Fatal().Err(http.ListenAndServe(*listeningAddress, nil)).Send()
 }
