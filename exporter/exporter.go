@@ -377,10 +377,10 @@ func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	if err := e.collect(ch); err != nil {
 		log.Info().Msgf("Error scraping clickhouse: %s", err)
 		e.scrapeFailures.Inc()
-		e.scrapeFailures.Collect(ch)
-
 		upValue = 0
 	}
+
+	e.scrapeFailures.Collect(ch)
 
 	ch <- prometheus.MustNewConstMetric(
 		prometheus.NewDesc(
