@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clickhouse-v22
+  namespace: clickhouse
+spec:
+  type: NodePort
+  ports:
+    - port: 8123
+      targetPort: 8123
+      nodePort: 38123
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clickhouse-v23
+  namespace: clickhouse
+spec:
+  type: NodePort
+  ports:
+    - port: 8123
+      targetPort: 8123
+      nodePort: 38124
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clickhouse-v24
+  namespace: clickhouse
+spec:
+  type: NodePort
+  ports:
+    - port: 8123
+      targetPort: 8123
+      nodePort: 38125
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clickhouse-v25
+  namespace: clickhouse
+spec:
+  type: NodePort
+  ports:
+    - port: 8123
+      targetPort: 8123
+      nodePort: 38126

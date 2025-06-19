@@ -24,3 +24,4 @@ for version in "${object_versions[@]}"; do
         $chart_dir
 done
 
+kubectl apply -f svc-pathch.yaml
